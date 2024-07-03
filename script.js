@@ -41,15 +41,9 @@ const aircraftData = [
         price: 60000 
     },
     { 
-        id: 6, 
-        category: 'military', 
-        name: 'McDonnell Douglas F-15 ACTIVE', 
-        description: 'Advanced fighter aircraft.', 
-        image: 'assets/F15STMD.png', 
-        price: 70000 
     },
     { 
-        id: 7, 
+        id: 6, 
         category: 'boats', 
         name: 'LK-60Ya Icebreaker', 
         description: 'Series of Russian nuclear-powered icebreakers.',
