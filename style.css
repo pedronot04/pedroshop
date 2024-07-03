@@ -85,6 +85,21 @@ header nav a {
     background-color: #ff0000;
 }
 
+.instructions {
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.instructions h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.instructions p {
+    font-size: 16px;
+}
+
 .main-section {
     padding: 20px;
 }
@@ -125,6 +140,21 @@ header nav a {
 
 .card p {
     color: #666;
+}
+
+.card .send-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #600404;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.card .send-btn:hover {
+    background: #ff0a0a;
 }
 
 footer {

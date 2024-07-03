@@ -54,7 +54,7 @@ const aircraftData = [
         name: 'LK-60Ya Icebreaker', 
         description: 'Series of Russian nuclear-powered icebreakers.',
         image: 'assets/lk60a.png',
-        price: 1200000
+        price: 1200000 
     }
 ];
 
@@ -67,6 +67,7 @@ function createCard(vehicle) {
         <img src="${vehicle.image}" alt="${vehicle.name}">
         <p>${vehicle.description}</p>
         <p><strong>${vehicle.price} WP</strong></p>
+        <a href="https://discord.com/users/870065855134834799" class="btn send-btn">Send</a>
     `;
     return card;
 }
@@ -111,6 +112,7 @@ const searchForm = document.getElementById('searchForm');
 if (searchForm) {
     searchForm.addEventListener('submit', searchAircraft);
 }
+
 
 // Function to populate private aircraft on private.html
 document.addEventListener('DOMContentLoaded', function() {
