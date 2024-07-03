@@ -67,7 +67,6 @@ function createCard(vehicle) {
         <img src="${vehicle.image}" alt="${vehicle.name}">
         <p>${vehicle.description}</p>
         <p><strong>${vehicle.price} WP</strong></p>
-        <a href="https://discord.com/users/1242605005421285477" target="_blank" class="btn">Buy it</a>
     `;
     return card;
 }

@@ -127,21 +127,6 @@ header nav a {
     color: #666;
 }
 
-.card .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #600404;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-    font-size: 14px;
-    border-radius: 3px;
-}
-
-.card .btn:hover {
-    background: #ff0a0a;
-}
-
 footer {
     background: #333;
     color: #ffffff;
