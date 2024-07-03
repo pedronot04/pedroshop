@@ -1,11 +1,11 @@
 // Simulated data for demonstration
 const aircraftData = [
-    { id: 1, category: 'military', name: 'Northrop Grumman RQ-4', description: 'Long-endurance unmanned aerial vehicle used for recon.', image: 'assets/RQ4.png', price: '' },
-    { id: 2, category: 'military', name: 'Northrop Grumman B-2', description: 'Stealth bomber aircraft.', image: 'assets/B2SP.png', price: '' },
-    { id: 3, category: 'cargo', name: 'Antonov AN-225', description: 'Heavy cargo aircraft.', image: 'assets/AN225.png', price: '' },
-    { id: 4, category: 'military', name: 'General Atomics MQ-9', description: 'Unmanned combat aerial vehicle.', image: 'assets/MQ9.png', price: '' },
-    { id: 5, category: 'military', name: 'Lockheed U-2', description: 'High-altitude reconnaissance aircraft.', image: 'assets/U2.png', price: '' },
-    { id: 6, category: 'military', name: 'McDonnell Douglas F-15 ACTIVE', description: 'Advanced fighter aircraft.', image: 'assets/F15STMD.png', price: '' }
+    { id: 1, category: 'military', name: 'Northrop Grumman RQ-4', description: 'Long-endurance unmanned aerial vehicle used for recon.', image: 'assets/RQ4.png', price: 700000 },
+    { id: 2, category: 'military', name: 'Northrop Grumman B-2', description: 'Stealth bomber aircraft.', image: 'assets/B2SP.png', price: 50000 },
+    { id: 3, category: 'cargo', name: 'Antonov AN-225', description: 'Heavy cargo aircraft.', image: 'assets/AN225.png', price: 2000000 },
+    { id: 4, category: 'military', name: 'General Atomics MQ-9', description: 'Unmanned combat aerial vehicle.', image: 'assets/MQ9.png', price: 23000 },
+    { id: 5, category: 'military', name: 'Lockheed U-2', description: 'High-altitude reconnaissance aircraft.', image: 'assets/U2.png', price: 60000 },
+    { id: 6, category: 'military', name: 'McDonnell Douglas F-15 ACTIVE', description: 'Advanced fighter aircraft.', image: 'assets/F15STMD.png', price: 70000 },
 ];
 
 // Function to create a single aircraft card
@@ -16,7 +16,8 @@ function createCard(aircraft) {
         <h3>${aircraft.name}</h3>
         <img src="${aircraft.image}" alt="${aircraft.name}">
         <p>${aircraft.description}</p>
-        <a href="#" class="btn">View Details</a>
+        <p><strong>${aircraft.price} WP</strong></p>
+        <a href="https://discord.com/users/870065855134834799" target="_blank" class="btn">Buy it</a>
     `;
     return card;
 }
