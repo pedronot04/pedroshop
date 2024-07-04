@@ -69,7 +69,7 @@ const aircraftData = [
         category: 'commercial', 
         name: 'Mil Mi-26', 
         description: 'Its an Soviet Heavy Helicopter and is the Biggest Helicopter in the World.',
-        image: 'assets/mi26.png',
+        image: 'assets/MI26.png',
         price: 27500
     },
     { 
