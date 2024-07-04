@@ -41,13 +41,86 @@ const aircraftData = [
         price: 60000 
     },
     { 
-        id: 7, 
+        id: 6, 
         category: 'boats', 
         name: 'LK-60Ya Icebreaker', 
         description: 'Series of Russian nuclear-powered icebreakers.',
         image: 'assets/lk60a.png',
-        price: 1200000 
-    }
+        price: 1300000 
+    },
+    { 
+        id: 7, 
+        category: 'military', 
+        name: 'Lockheed F-117', 
+        description: 'Stealth attack aircraft.',
+        image: 'assets/F117.png',
+        price: 31000
+    },
+    { 
+        id: 8, 
+        category: 'military', 
+        name: 'Lun-Class Ekranoplan', 
+        description: 'Series of Soviet Ekranoplanes.',
+        image: 'assets/LEKRA.png',
+        price: 160000
+    },
+    { 
+        id: 9, 
+        category: 'commercial', 
+        name: 'Mil Mi-26', 
+        description: 'Its an Soviet Heavy Helicopter and is the Biggest Helicopter in the World.',
+        image: 'assets/mi26.png',
+        price: 27500
+    },
+    { 
+        id: 10, 
+        category: 'military', 
+        name: 'Northrop Tacit Blue', 
+        description: 'Prototype of an Stealth Aircraft.',
+        image: 'assets/TACIT.png',
+        price: 40000
+    },
+    { 
+        id: 11, 
+        category: 'military', 
+        name: 'North American X-15', 
+        description: 'World Fastest Aircraft with an speed of 3000+ MPH.',
+        image: 'assets/X15.png',
+        price: 600000
+    },
+    { 
+        id: 12, 
+        category: 'military', 
+        name: 'North American XB-45', 
+        description: 'Early Bomber-Jet prototype for the USAF.',
+        image: 'assets/XB-45.png',
+        price: 30000
+    },
+    { 
+        id: 13, 
+        category: 'military', 
+        name: 'Republic XF-12', 
+        description: 'Cancelled 4 engines bomber for USAF in the middle of WW2.',
+        image: 'assets/XB-12.png',
+        price: 50000
+    },
+    { 
+        id: 14, 
+        category: 'commercial', 
+        name: 'Boeing 787-9', 
+        description: 'Wide-Body Airliner with 2 Powerful Jet-Engines',
+        image: 'assets/7879.png',
+        price: 55000
+    },
+    { 
+        id: 14, 
+        category: 'commercial', 
+        name: 'Airbus A321neo', 
+        description: 'Single-Aisle Airliner created by Airbus',
+        image: 'assets/A321.png',
+        price: 26500
+    },
+
 ];
 
 // Function to create a single aircraft card
@@ -107,6 +180,57 @@ if (searchForm) {
 
 // Function to populate private aircraft on private.html
 document.addEventListener('DOMContentLoaded', function() {
+    const privateList = document.getElementById('privateList');
+    if (privateList) {
+        populateAircraftByCategory('private'); // Call a function to populate private aircraft cards
+    }
+});
+
+// Function to populate military aircraft on military.html
+document.addEventListener('DOMContentLoaded', function() {
+    const militaryList = document.getElementById('militaryList');
+    if (militaryList) {
+        populateAircraftByCategory('military'); // Call a function to populate military aircraft cards
+    }
+});
+
+// Function to populate commercial aircraft on commercial.html
+document.addEventListener('DOMContentLoaded', function() {
+    const commercialList = document.getElementById('commercialList');
+    if (commercialList) {
+        populateAircraftByCategory('commercial'); // Call a function to populate commercial aircraft cards
+    }
+});
+
+// Function to populate cargo aircraft on cargo.html
+document.addEventListener('DOMContentLoaded', function() {
+    const cargoList = document.getElementById('cargoList');
+    if (cargoList) {
+        populateAircraftByCategory('cargo'); // Call a function to populate cargo aircraft cards
+    }
+});
+
+// Function to populate boats on boats.html
+document.addEventListener('DOMContentLoaded', function() {
+    const boatsList = document.getElementById('boatsList');
+    if (boatsList) {
+        populateAircraftByCategory('boats'); // Call a function to populate boats cards
+    }
+});
+
+// Generic function to populate aircraft by category
+function populateAircraftByCategory(category) {
+    const filteredAircraft = aircraftData.filter(vehicle => vehicle.category === category);
+
+    const listElementId = `${category}List`;
+    filteredAircraft.forEach(vehicle => {
+        const card = createCard(vehicle);
+        document.getElementById(listElementId).appendChild(card);
+    });
+}
+
+// Function to populate all aircraft on the main page
+document.addEventListener('DOMContentLoaded', function() {
     const aircraftList = document.getElementById('aircraftList');
     if (aircraftList) {
         aircraftData.forEach(vehicle => {
@@ -114,4 +238,33 @@ document.addEventListener('DOMContentLoaded', function() {
             aircraftList.appendChild(card);
         });
     }
+});
+
+// Event listener for DOMContentLoaded to initialize the entire script
+document.addEventListener('DOMContentLoaded', function() {
+    // Other initialization code here
+
+    // Initialize the hero carousel
+    initializeHeroCarousel();
+});
+// Event listener for DOMContentLoaded to initialize the entire script
+document.addEventListener('DOMContentLoaded', function() {
+    // Event listener for search form submission
+    const searchForm = document.getElementById('searchForm');
+    if (searchForm) {
+        searchForm.addEventListener('submit', searchAircraft);
+    }
+
+    // Populate all aircraft on the main page
+    populateAllAircraft();
+
+    // Populate specific categories on their respective pages
+    populateAircraftByCategory('private');
+    populateAircraftByCategory('military');
+    populateAircraftByCategory('commercial');
+    populateAircraftByCategory('cargo');
+    populateAircraftByCategory('boats');
+
+    // Initialize the hero carousel
+    initializeHeroCarousel();
 });
