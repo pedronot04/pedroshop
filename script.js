@@ -41,8 +41,6 @@ const aircraftData = [
         price: 60000 
     },
     { 
-    },
-    { 
         id: 6, 
         category: 'boats', 
         name: 'LK-60Ya Icebreaker', 
@@ -85,19 +83,7 @@ function searchAircraft(event) {
             searchResults.appendChild(card);
         });
     } else {
-        const exampleVehicles = [
-            aircraftData.find(v => v.category === 'commercial'),
-            aircraftData.find(v => v.category === 'private'),
-            aircraftData.find(v => v.category === 'military'),
-            aircraftData.find(v => v.category === 'boats') // Include boats as an example
-        ];
-
-        exampleVehicles.forEach(vehicle => {
-            if (vehicle) {
-                const card = createCard(vehicle);
-                searchResults.appendChild(card);
-            }
-        });
+        searchResults.innerHTML = '<p>No results found. Please try a different search term.</p>';
     }
 }
 
@@ -107,54 +93,27 @@ if (searchForm) {
     searchForm.addEventListener('submit', searchAircraft);
 }
 
-
-// Function to populate private aircraft on private.html
-document.addEventListener('DOMContentLoaded', function() {
-    const privateList = document.getElementById('privateList');
-    if (privateList) {
-        populateAircraftByCategory('private'); // Call a function to populate private aircraft cards
-    }
-});
-
-// Function to populate military aircraft on military.html
-document.addEventListener('DOMContentLoaded', function() {
-    const militaryList = document.getElementById('militaryList');
-    if (militaryList) {
-        populateAircraftByCategory('military'); // Call a function to populate military aircraft cards
-    }
-});
-
-// Function to populate commercial aircraft on commercial.html
-document.addEventListener('DOMContentLoaded', function() {
-    const commercialList = document.getElementById('commercialList');
-    if (commercialList) {
-        populateAircraftByCategory('commercial'); // Call a function to populate commercial aircraft cards
-    }
-});
-
-// Function to populate cargo aircraft on cargo.html
-document.addEventListener('DOMContentLoaded', function() {
-    const cargoList = document.getElementById('cargoList');
-    if (cargoList) {
-        populateAircraftByCategory('cargo'); // Call a function to populate cargo aircraft cards
-    }
-});
-
-// Function to populate boats on boats.html
-document.addEventListener('DOMContentLoaded', function() {
-    const boatsList = document.getElementById('boatsList');
-    if (boatsList) {
-        populateAircraftByCategory('boats'); // Call a function to populate boats cards
-    }
-});
-
-// Generic function to populate aircraft by category
+// Function to populate aircraft by category
 function populateAircraftByCategory(category) {
     const filteredAircraft = aircraftData.filter(vehicle => vehicle.category === category);
-
     const listElementId = `${category}List`;
-    filteredAircraft.forEach(vehicle => {
-        const card = createCard(vehicle);
-        document.getElementById(listElementId).appendChild(card);
-    });
+    
+    const listElement = document.getElementById(listElementId);
+    if (listElement) {
+        filteredAircraft.forEach(vehicle => {
+            const card = createCard(vehicle);
+            listElement.appendChild(card);
+        });
+    }
 }
+
+// Event listeners for different category pages
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryPages = ['private', 'military', 'commercial', 'cargo', 'boats'];
+    categoryPages.forEach(category => {
+        const listElement = document.getElementById(`${category}List`);
+        if (listElement) {
+            populateAircraftByCategory(category);
+        }
+    });
+});
