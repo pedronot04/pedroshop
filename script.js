@@ -65,15 +65,10 @@ const aircraftData = [
         price: 160000
     },
     { 
-        id: 9, 
-        category: 'commercial', 
-        name: 'Mil Mi-26', 
-        description: 'Its an Soviet Heavy Helicopter and is the Biggest Helicopter in the World.',
-        image: 'assets/MI26.png',
-        price: 27500
+    
     },
     { 
-        id: 10, 
+        id: 9, 
         category: 'military', 
         name: 'Northrop Tacit Blue', 
         description: 'Prototype of an Stealth Aircraft.',
@@ -81,7 +76,7 @@ const aircraftData = [
         price: 40000
     },
     { 
-        id: 11, 
+        id: 10, 
         category: 'military', 
         name: 'North American X-15', 
         description: 'World Fastest Aircraft with an speed of 3000+ MPH.',
@@ -89,7 +84,7 @@ const aircraftData = [
         price: 600000
     },
     { 
-        id: 12, 
+        id: 11, 
         category: 'military', 
         name: 'North American XB-45', 
         description: 'Early Bomber-Jet prototype for the USAF.',
@@ -97,7 +92,7 @@ const aircraftData = [
         price: 30000
     },
     { 
-        id: 13, 
+        id: 12, 
         category: 'military', 
         name: 'Republic XF-12', 
         description: 'Cancelled 4 engines bomber for USAF in the middle of WW2.',
@@ -105,7 +100,7 @@ const aircraftData = [
         price: 50000
     },
     { 
-        id: 14, 
+        id: 13, 
         category: 'commercial', 
         name: 'Boeing 787-9', 
         description: 'Wide-Body Airliner with 2 Powerful Jet-Engines',
