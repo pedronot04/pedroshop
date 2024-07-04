@@ -132,7 +132,7 @@ function createCard(vehicle) {
         <img src="${vehicle.image}" alt="${vehicle.name}">
         <p>${vehicle.description}</p>
         <p><strong>${vehicle.price} WP</strong></p>
-        <a href="https://discord.com/users/your_discord_id" class="btn send-btn">Send</a>
+        <a href="https://discord.com/users/870065855134834799" class="btn send-btn">Send</a>
     `;
     return card;
 }
