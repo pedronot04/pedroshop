@@ -10,14 +10,6 @@ const aircraftData = [
     },
     { 
         id: 2, 
-        category: 'military', 
-        name: 'Northrop Grumman B-2', 
-        description: 'Stealth bomber aircraft.', 
-        image: 'assets/B2SP.png', 
-        price: 50000 
-    },
-    { 
-        id: 3, 
         category: 'cargo', 
         name: 'Antonov AN-225', 
         description: 'Heavy cargo aircraft.', 
@@ -25,7 +17,7 @@ const aircraftData = [
         price: 2000000 
     },
     { 
-        id: 4, 
+        id: 3, 
         category: 'military', 
         name: 'General Atomics MQ-9', 
         description: 'Unmanned combat aerial vehicle.', 
@@ -33,7 +25,7 @@ const aircraftData = [
         price: 23000 
     },
     { 
-        id: 5, 
+        id: 4, 
         category: 'military', 
         name: 'Lockheed U-2', 
         description: 'High-altitude reconnaissance aircraft.', 
@@ -41,7 +33,7 @@ const aircraftData = [
         price: 60000 
     },
     { 
-        id: 6, 
+        id: 5, 
         category: 'boats', 
         name: 'LK-60Ya Icebreaker', 
         description: 'Series of Russian nuclear-powered icebreakers.',
@@ -49,7 +41,7 @@ const aircraftData = [
         price: 1300000 
     },
     { 
-        id: 7, 
+        id: 6, 
         category: 'military', 
         name: 'Lockheed F-117', 
         description: 'Stealth attack aircraft.',
@@ -57,7 +49,7 @@ const aircraftData = [
         price: 31000
     },
     { 
-        id: 8, 
+        id: 7, 
         category: 'military', 
         name: 'Lun-Class Ekranoplan', 
         description: 'Series of Soviet Ekranoplanes.',
@@ -65,7 +57,7 @@ const aircraftData = [
         price: 160000
     },
     { 
-        id: 9, 
+        id: 8, 
         category: 'military', 
         name: 'Northrop Tacit Blue', 
         description: 'Prototype of an Stealth Aircraft.',
@@ -73,7 +65,7 @@ const aircraftData = [
         price: 40000
     },
     { 
-        id: 10, 
+        id: 9, 
         category: 'military', 
         name: 'North American X-15', 
         description: 'World Fastest Aircraft with an speed of 3000+ MPH.',
@@ -81,7 +73,7 @@ const aircraftData = [
         price: 600000
     },
     { 
-        id: 11, 
+        id: 10, 
         category: 'military', 
         name: 'North American XB-45', 
         description: 'Early Bomber-Jet prototype for the USAF.',
@@ -89,7 +81,7 @@ const aircraftData = [
         price: 30000
     },
     { 
-        id: 12, 
+        id: 11, 
         category: 'military', 
         name: 'Republic XF-12', 
         description: 'Cancelled 4 engines bomber for USAF in the middle of WW2.',
@@ -97,15 +89,15 @@ const aircraftData = [
         price: 50000
     },
     { 
-        id: 17, 
+        id: 12, 
         category: 'commercial', 
         name: 'HyperMach SonicStar', 
         description: 'Prototype SST, planned to fly at speeds of Mach 3.6.',
         image: 'assets/HYPER.png',
-        price: 3000000
+        price: 4000000
     },
     { 
-        id: 14, 
+        id: 13, 
         category: 'commercial', 
         name: 'Airbus A321neo', 
         description: 'Single-Aisle Airliner created by Airbus.',
@@ -113,7 +105,7 @@ const aircraftData = [
         price: 26500
     },
     { 
-        id: 15, 
+        id: 14, 
         category: 'commercial', 
         name: 'Focke-Wulf Fw 200', 
         description: 'Multi-functions Multi-engine from WW2.',
@@ -121,7 +113,7 @@ const aircraftData = [
         price: 23000
     },
     { 
-        id: 16, 
+        id: 15, 
         category: 'private', 
         name: 'Aerion SBJ', 
         description: 'Private SST Prototype.',
@@ -129,7 +121,7 @@ const aircraftData = [
         price: 125000
     },
     { 
-        id: 17, 
+        id: 16, 
         category: 'commercial', 
         name: 'Boeing 787-9', 
         description: 'Wide-Body Airliner with 2 Powerful Jet-Engines.',
@@ -137,7 +129,7 @@ const aircraftData = [
         price: 55000
     },
     { 
-        id: 18, 
+        id: 17, 
         category: 'commercial', 
         name: 'Irkut MC-21', 
         description: 'Family of Russian Commercial aircrafts.',
@@ -145,22 +137,13 @@ const aircraftData = [
         price: 55000
     },
     { 
-        id: 18, 
+        id: 19, 
         category: 'commercial', 
         name: 'Convair 990', 
         description: 'Fastest Subsonic aircraft made.',
         image: 'assets/CONVAIR990.png',
         price: 45000
     },
-    { 
-        id: 18, 
-        category: 'military', 
-        name: 'McDonnell Douglas F-15 ACTIVE', 
-        description: 'Prototype of an STOL/MTD Aircraft.',
-        image: 'assets/F15STMD.png',
-        price: 45000
-    },
-
 ];
 
 // Function to format price with thousand separators
