@@ -97,14 +97,6 @@ const aircraftData = [
         price: 50000
     },
     { 
-        id: 12, 
-        category: 'commercial', 
-        name: 'HyperMach SonicStar', 
-        description: 'Prototype SST, planned to fly at speeds of Mach 3.6.',
-        image: 'assets/HYPER.png',
-        price: 4000000
-    },
-    { 
         id: 13, 
         category: 'commercial', 
         name: 'Airbus A321neo', 
