@@ -110,7 +110,7 @@ const aircraftData = [
         name: 'Focke-Wulf Fw 200', 
         description: 'Multi-functions Multi-engine from WW2.',
         image: 'assets/FOCCONDOR.png',
-        price: 23000
+        price: 33000
     },
     { 
         id: 15, 
@@ -134,7 +134,7 @@ const aircraftData = [
         name: 'Irkut MC-21', 
         description: 'Family of Russian Commercial aircrafts.',
         image: 'assets/IRKUTMC21.png',
-        price: 50000
+        price: 57000
     },
     { 
         id: 18, 
