@@ -10,22 +10,38 @@ const aircraftData = [
     },
     { 
         id: 2, 
-        category: 'cargo', 
-        name: 'Antonov AN-225', 
-        description: 'Heavy cargo aircraft.', 
-        image: 'assets/AN225.png', 
-        price: 2600000 
+        category: 'military', 
+        name: 'North American X-15', 
+        description: 'World Fastest Aircraft with an speed of 3000+ MPH.',
+        image: 'assets/X15.png',
+        price: 650000
     },
     { 
         id: 3, 
         category: 'military', 
-        name: 'General Atomics MQ-9', 
-        description: 'Unmanned combat aerial vehicle.', 
-        image: 'assets/MQ9.png', 
-        price: 23000 
+        name: 'Sukhoi T-4', 
+        description: 'Prototype Strategic Bomber.',
+        image: 'assets/SOTKA.png',
+        price: 173000
     },
     { 
         id: 4, 
+        category: 'cargo', 
+        name: 'Antonov AN-225', 
+        description: 'Heavy cargo aircraft.', 
+        image: 'assets/AN225.png', 
+        price: 2650000 
+    },
+    { 
+        id: 5, 
+        category: 'military', 
+        name: 'General Atomics MQ-9', 
+        description: 'Unmanned combat aerial vehicle.', 
+        image: 'assets/MQ9.png', 
+        price: 40000 
+    },
+    { 
+        id: 6, 
         category: 'military', 
         name: 'Lockheed U-2', 
         description: 'High-altitude reconnaissance aircraft.', 
@@ -41,7 +57,7 @@ const aircraftData = [
         price: 1450000 
     },
     { 
-        id: 6, 
+        id: 7, 
         category: 'military', 
         name: 'Lockheed F-117', 
         description: 'Stealth attack aircraft.',
@@ -49,7 +65,7 @@ const aircraftData = [
         price: 31000
     },
     { 
-        id: 7, 
+        id: 8, 
         category: 'military', 
         name: 'Lun-Class Ekranoplan', 
         description: 'Series of Soviet Ekranoplanes.',
@@ -57,20 +73,12 @@ const aircraftData = [
         price: 180000
     },
     { 
-        id: 8, 
+        id: 9, 
         category: 'military', 
         name: 'Northrop Tacit Blue', 
         description: 'Prototype of an Stealth Aircraft.',
         image: 'assets/TACIT.png',
         price: 40000
-    },
-    { 
-        id: 9, 
-        category: 'military', 
-        name: 'North American X-15', 
-        description: 'World Fastest Aircraft with an speed of 3000+ MPH.',
-        image: 'assets/X15.png',
-        price: 650000
     },
     { 
         id: 10, 
@@ -137,7 +145,7 @@ const aircraftData = [
         price: 50000
     },
     { 
-        id: 19, 
+        id: 18, 
         category: 'commercial', 
         name: 'Convair 990', 
         description: 'Fastest Subsonic aircraft made.',
@@ -156,8 +164,8 @@ function createCard(vehicle) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
-        <h3>${vehicle.name}</h3>
         <img src="${vehicle.image}" alt="${vehicle.name}">
+        <h3>${vehicle.name}</h3>
         <p>${vehicle.description}</p>
         <h4><strong>${formatPrice(vehicle.price)} </strong> WP</h4>
         <a href="https://discord.com/users/870065855134834799" class="btn send-btn">Send</a>
