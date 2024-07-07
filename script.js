@@ -6,7 +6,7 @@ const aircraftData = [
         name: 'Northrop Grumman RQ-4', 
         description: 'Long-endurance unmanned aerial vehicle used for recon.', 
         image: 'assets/RQ4.png', 
-        price: 700000 
+        price: 750000 
     },
     { 
         id: 2, 
@@ -14,7 +14,7 @@ const aircraftData = [
         name: 'Antonov AN-225', 
         description: 'Heavy cargo aircraft.', 
         image: 'assets/AN225.png', 
-        price: 2000000 
+        price: 2600000 
     },
     { 
         id: 3, 
@@ -38,7 +38,7 @@ const aircraftData = [
         name: 'LK-60Ya Icebreaker', 
         description: 'Series of Russian nuclear-powered icebreakers.',
         image: 'assets/lk60a.png',
-        price: 1300000 
+        price: 1450000 
     },
     { 
         id: 6, 
@@ -54,7 +54,7 @@ const aircraftData = [
         name: 'Lun-Class Ekranoplan', 
         description: 'Series of Soviet Ekranoplanes.',
         image: 'assets/LEKRA.png',
-        price: 160000
+        price: 180000
     },
     { 
         id: 8, 
@@ -70,7 +70,7 @@ const aircraftData = [
         name: 'North American X-15', 
         description: 'World Fastest Aircraft with an speed of 3000+ MPH.',
         image: 'assets/X15.png',
-        price: 600000
+        price: 650000
     },
     { 
         id: 10, 
@@ -118,7 +118,7 @@ const aircraftData = [
         name: 'Aerion SBJ', 
         description: 'Private SST Prototype.',
         image: 'assets/AERI.png',
-        price: 125000
+        price: 145000
     },
     { 
         id: 16, 
@@ -134,7 +134,7 @@ const aircraftData = [
         name: 'Irkut MC-21', 
         description: 'Family of Russian Commercial aircrafts.',
         image: 'assets/IRKUTMC21.png',
-        price: 55000
+        price: 50000
     },
     { 
         id: 19, 
@@ -142,7 +142,7 @@ const aircraftData = [
         name: 'Convair 990', 
         description: 'Fastest Subsonic aircraft made.',
         image: 'assets/CONVAIR990.png',
-        price: 45000
+        price: 55000
     },
 ];
 
