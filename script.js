@@ -65,9 +65,6 @@ const aircraftData = [
         price: 160000
     },
     { 
-    
-    },
-    { 
         id: 9, 
         category: 'military', 
         name: 'Northrop Tacit Blue', 
@@ -100,23 +97,76 @@ const aircraftData = [
         price: 50000
     },
     { 
-        id: 13, 
+        id: 17, 
         category: 'commercial', 
-        name: 'Boeing 787-9', 
-        description: 'Wide-Body Airliner with 2 Powerful Jet-Engines',
-        image: 'assets/7879.png',
-        price: 55000
+        name: 'HyperMach SonicStar', 
+        description: 'Prototype SST, planned to fly at speeds of Mach 3.6.',
+        image: 'assets/HYPER.png',
+        price: 3000000
     },
     { 
         id: 14, 
         category: 'commercial', 
         name: 'Airbus A321neo', 
-        description: 'Single-Aisle Airliner created by Airbus',
+        description: 'Single-Aisle Airliner created by Airbus.',
         image: 'assets/A321.png',
         price: 26500
     },
+    { 
+        id: 15, 
+        category: 'commercial', 
+        name: 'Focke-Wulf Fw 200', 
+        description: 'Multi-functions Multi-engine from WW2.',
+        image: 'assets/FOCCONDOR.png',
+        price: 23000
+    },
+    { 
+        id: 16, 
+        category: 'private', 
+        name: 'Aerion SBJ', 
+        description: 'Private SST Prototype.',
+        image: 'assets/AERI.png',
+        price: 125000
+    },
+    { 
+        id: 17, 
+        category: 'commercial', 
+        name: 'Boeing 787-9', 
+        description: 'Wide-Body Airliner with 2 Powerful Jet-Engines.',
+        image: 'assets/7879.png',
+        price: 55000
+    },
+    { 
+        id: 18, 
+        category: 'commercial', 
+        name: 'Irkut MC-21', 
+        description: 'Family of Russian Commercial aircrafts.',
+        image: 'assets/IRKUTMC21.png',
+        price: 55000
+    },
+    { 
+        id: 18, 
+        category: 'commercial', 
+        name: 'Convair 990', 
+        description: 'Fastest Subsonic aircraft made.',
+        image: 'assets/CONVAIR990.png',
+        price: 45000
+    },
+    { 
+        id: 18, 
+        category: 'military', 
+        name: 'McDonnell Douglas F-15 ACTIVE', 
+        description: 'Prototype of an STOL/MTD Aircraft.',
+        image: 'assets/F15STMD.png',
+        price: 45000
+    },
 
 ];
+
+// Function to format price with thousand separators
+function formatPrice(price) {
+    return price.toLocaleString('en-US', { maximumFractionDigits: 0 });
+}
 
 // Function to create a single aircraft card
 function createCard(vehicle) {
@@ -126,7 +176,7 @@ function createCard(vehicle) {
         <h3>${vehicle.name}</h3>
         <img src="${vehicle.image}" alt="${vehicle.name}">
         <p>${vehicle.description}</p>
-        <p><strong>${vehicle.price} WP</strong></p>
+        <h4><strong>${formatPrice(vehicle.price)} </strong> WP</h4>
         <a href="https://discord.com/users/870065855134834799" class="btn send-btn">Send</a>
     `;
     return card;
@@ -233,33 +283,4 @@ document.addEventListener('DOMContentLoaded', function() {
             aircraftList.appendChild(card);
         });
     }
-});
-
-// Event listener for DOMContentLoaded to initialize the entire script
-document.addEventListener('DOMContentLoaded', function() {
-    // Other initialization code here
-
-    // Initialize the hero carousel
-    initializeHeroCarousel();
-});
-// Event listener for DOMContentLoaded to initialize the entire script
-document.addEventListener('DOMContentLoaded', function() {
-    // Event listener for search form submission
-    const searchForm = document.getElementById('searchForm');
-    if (searchForm) {
-        searchForm.addEventListener('submit', searchAircraft);
-    }
-
-    // Populate all aircraft on the main page
-    populateAllAircraft();
-
-    // Populate specific categories on their respective pages
-    populateAircraftByCategory('private');
-    populateAircraftByCategory('military');
-    populateAircraftByCategory('commercial');
-    populateAircraftByCategory('cargo');
-    populateAircraftByCategory('boats');
-
-    // Initialize the hero carousel
-    initializeHeroCarousel();
 });
